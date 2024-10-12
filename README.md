@@ -1,37 +1,68 @@
-This is a great overview of the Industrial Carbon Calculator for Kenya! Here's a more refined version with some minor edits for clarity and professionalism:
-
----
-
 # Industrial Carbon Calculator for Kenya
 
 ## Overview
 
-The **Industrial Carbon Calculator** is a user-friendly Streamlit application designed to assist industries in Kenya in calculating their carbon emissions based on energy consumption and waste generation. The tool is tailored for three key sectors—**Manufacturing**, **Agriculture**, and **Transportation**—offering an easy way for industries to measure their carbon footprint and track their environmental impact.
+The **Industrial Carbon Calculator** is a Streamlit application designed to help industries in Kenya calculate their carbon emissions based on energy consumption and waste generation. It serves industries in the **Manufacturing**, **Agriculture**, and **Transportation** sectors, providing a simple way to understand their carbon footprint.
 
 ## Features
 
-- **User-Friendly Interface**: A simple and intuitive design that guides users through the process of inputting their data.
-- **Custom Emission Factors**: Incorporates industry-standard emission factors specific to different energy sources and waste types.
-- **Annual Emission Calculation**: Converts monthly energy and waste data into annual carbon emissions.
-- **Detailed Results**: Provides an emissions breakdown by category and displays the total carbon footprint in tonnes of CO₂.
+- **User-Friendly Interface**: Intuitive design that guides users through inputting their data.
+- **Custom Emission Factors**: Utilizes specific emission factors based on industry standards.
+- **Annual Emission Calculation**: Converts monthly consumption inputs into annual carbon emissions.
+- **Detailed Results**: Provides an emissions breakdown and displays the total carbon footprint in tonnes of CO₂.
 
 ## Technologies Used
 
-- **Streamlit**: For building and sharing the web application interface.
-- **Python**: The primary programming language used for the calculations.
+- **Streamlit**: Web framework for creating interactive apps.
+- **Python**: The main programming language for logic and calculations.
 
 ## Installation
 
-1. Clone the repository or download the code files.
-2. Install the required libraries using the following command:
+### Setting Up a Virtual Environment
 
+1. Navigate to your project directory:
+   
 ```bash
-pip install streamlit
+cd your_project_directory
 ```
 
-## Run the Application
+2. Create a virtual environment (using `venv`):
+   
+```bash
+python -m venv venv
+```
 
-To run the application, use the following command:
+3. Activate the virtual environment:
+   - **Windows**:
+   
+   ```bash
+   venv\Scripts\activate
+   ```
+   - **MacOS/Linux**:
+   
+   ```bash
+   source venv/bin/activate
+   ```
+
+### Installing Dependencies
+
+1. Install the required libraries via `requirements.txt`. Here's how to do that:
+
+```bash
+pip install -r requirements.txt
+```
+
+### `requirements.txt`
+
+```plaintext
+streamlit==1.25.0  # Replace with the latest version if necessary
+numpy==1.21.2      # Required for numerical calculations (if applicable)
+pandas==1.3.3      # Required for data handling (if applicable)
+```
+
+### Run the Application
+
+To run the application, use the command below:
 
 ```bash
 streamlit run your_script_name.py
@@ -39,9 +70,9 @@ streamlit run your_script_name.py
 
 ## How to Use
 
-1. **Select Your Industry**: Choose from Manufacturing, Agriculture, or Transportation.
-2. **Input Data**: Enter your monthly energy consumption and waste generation using the provided sliders.
-   - **Manufacturing**: Input data for electricity, natural gas, fuel oil, and waste.
-   - **Agriculture**: Input data for electricity, diesel, and waste.
-   - **Transportation**: Input data for diesel and gasoline.
-3. **Calculate Emissions**: Click the "Calculate CO₂ Emissions" button to generate a detailed report of your carbon emissions by category and the total carbon footprint.
+1. **Select Your Industry**: Choose Manufacturing, Agriculture, or Transportation.
+2. **Input Data**: Use the sliders to enter monthly energy consumption and waste generation data.
+   - **Manufacturing**: Enter values for electricity, natural gas, fuel oil, and waste.
+   - **Agriculture**: Enter values for electricity, diesel, and waste.
+   - **Transportation**: Enter values for diesel and gasoline.
+3. **Calculate Emissions**: Click "Calculate CO₂ Emissions" to see the emissions breakdown and total carbon footprint.
